@@ -41,6 +41,7 @@ function txt2html(elemento=String,archivo=String) {
     }
     xhttp.open("GET", archivo);
     xhttp.send();
+    return
   }
 
 
@@ -51,6 +52,7 @@ function txt2html(elemento=String,archivo=String) {
  */
 function setimg(src=String,id=String){
     obtener(id).src=src;
+    return
 }
   
 /**
@@ -67,7 +69,16 @@ function changevis(ids=Array,visibility=Boolean) {
             obtener(ids[x]).style.display="none";
         } else {
             obtener(ids[x]).style.visibility ="visible";
-            obtener(ids[x]).style.display="visible";
+            obtener(ids[x]).style.display="block";
         }  
     }
+    return
 }
+
+/**
+ * [Una funcion que duerme el codigo durante X nilisegundos NECESITA QUE LA FUNCION DONDE SE EJECUTA SEA ASYNC] 
+ * @param {Number} ms Milisegundos a dormir 
+ */
+var sleep = function(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+};

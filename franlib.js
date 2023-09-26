@@ -23,7 +23,7 @@ function estamarcada(id=String){
  */
 
 function changezone(id=String){
-    obtener(id).display="inline-block";
+    obtener(id).style.display="inline-block";
 }
 
 /**

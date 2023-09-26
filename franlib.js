@@ -17,6 +17,10 @@ function estamarcada(id=String){
     return document.getElementById(id).checked;
 }
 
+function changezone(id=String){
+    obtener(id).display="inline-block";
+}
+
 /**
  * [Retorna el valor de un espacio]
  * @param {String} id

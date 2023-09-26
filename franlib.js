@@ -17,6 +17,11 @@ function estamarcada(id=String){
     return document.getElementById(id).checked;
 }
 
+/**
+ * [Añade inline-block para que no haya espacios entre displays]
+ * @param {String} id 
+ */
+
 function changezone(id=String){
     obtener(id).display="inline-block";
 }
